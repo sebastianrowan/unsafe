@@ -565,6 +565,8 @@ def get_losses(depth_ffe_df, ddf, ddf_types, s_values, vuln_dir_i):
     # We need to load ddf data for loss estimation
     naccs_ddfs = pd.read_parquet(join(vuln_dir_i, "physical", "naccs_ddfs.pqt"))
     hazus_ddfs = pd.read_parquet(join(vuln_dir_i, "physical", "hazus_ddfs.pqt"))
+    
+
     with open(join(vuln_dir_i, "physical", "hazus.json"), "r") as fp:
         HAZUS_MAX_DICT = json.load(fp)
     with open(join(vuln_dir_i, "physical", "naccs.json"), "r") as fp:
